@@ -1,5 +1,5 @@
 --------------   -------------------------------------------
-**Title**        Aiding the journey from data to publication in the plant sciences
+**Title**        COPO - Bridging the Digital Gap from Data to Publication 
 **Author**       _Presenting Author_, Author Two, Author Three ...
 **Affiliation**  The Genome Analysis Centre
 **Contact**       robert.davey@tgac.ac.uk
@@ -7,42 +7,16 @@
 **License**      Common Public Attribution License Version 1.0 (CPAL)
 --------------   -------------------------------------------
 
-The aim of open science is to make scientific research accessible to
-an inquiring public. This involves mechanisms for preserving and
-publishing research objects such as data, methods, software and manuscripts in
-an efficient and timely manner thus facilitating experimental reproducibility and transparency.
+The aim of open science is to make scientific research accessible. This involves mechanisms for preserving and publishing research objects such as data, methods, software and manuscripts in an efficient and timely manner thus facilitating experimental reproducibility and transparency.
 
-Existing mechanisms for enabling open science in plant research within the ``omics'' fields, are limited by: (i) complicated and time-consuming procedures for repository
-deposition; (ii) a lack of interoperability between
+Existing services for enabling open science in plant research within the ``omics'' fields such as the European Nucleotide Archive (ENA) (www.ebi.ac.uk/ena) and GigaScience (www.gigasciencejournal.com) are limited by: (i) complicated and time-consuming procedures for repository deposition; (ii) a lack of interoperability between
 disparate information sources and mechanisms; (iii) sub-optimal search and retrieval
-facilities across data repositories.
+facilities across data repositories; (iv) a lack of public awareness of existing services. 
 
-COPO (Collaborative Open Plant Omics) is an information
-aggregation and publishing platform, designed to help plant scientists publish
-and share research outputs and ease access to services across disparate sources of information. COPO is based on
-Django (www.djangoproject.com), a high-level Python
-web framework that offers rapid development and pragmatic design. In
-particular, the system uses a web
-front-end and a set of APIs (Application Programming
-Interfaces) to facilitate the aggregation of disparate research
-objects into logical profiles which represent a body of research. A
-profile can contain for example, sequence data, source codes, pdf files, image data or posters and presentations,
-all of which are fully described with associated meta
-data. The system acts as a brokering service,
-providing a useable interface to different repositories offloading the burden of data deposition from scientists. COPO seamlessly allows deposition of research objects to services
-such as the European Nucleotide Archive (www.ebi.ac.uk/ena) and will interface with others such as GigaScience (www.gigasciencejournal.com), f1000 (www.f1000research.com) and Slideshare (www.slideshare.net) as well as grid based data infrastructures such as iRODS
-(www.irods.org). Accessions to deposited objects will be stored in a COPO profile to be indexed and publicly searchable. DOIs (Digital Object Identifiers) will be minted, mapping to COPO profiles providing a permanent digital identity to be referenced around the Internet. COPO will take advantage of ISATools/ISATab (www.isa-tools.org) to provide technical continuity between services and researchers.
+COPO (Collaborative Open Plant Omics) is a brokering service which enables aggregation and publishing of research outputs by Bioinformaticians, as well as providing easy access to services across disparate sources of information. COPO (based on the Django web framework) is a web front-end and a set of APIs (Application Programming Interfaces), which facilitates the creation of logical profiles containing disparate but related research objects representing a body of work. A profile can contain for example, references to sequence data, source codes, pdf files, image data or posters and presentations, all of which are fully described with associated metadata. COPO seamlessly allows deposition of research objects to services such as ENA, GigaScience and f1000 (www.f1000research.com) as well as grid based data infrastructures such as iRODS (www.irods.org) and will interface with Orcid (www.orcid.org), thus unburdening Bioinformaticians. References to such deposited objects (which are not stored in COPO) will be maintained in a COPO profile. DOIs (Digital Object Identifiers) will be minted and mapped to COPO profiles providing a permanent digital identity to these collections of research objects. COPO will take advantage of the ISATools suite and the ISATab format developed by our collaborators at the University of Oxford (www.isa-tools.org) to provide technical continuity between services and researchers.
 
-Using APIs and virtualised resources, COPO will integrate other existing services such as the Galaxy
-(www.galaxyproject.org) and iPlant (www.iplantcollaborative.org) analytical platforms; figshare (www.figshare.com), Research Objects (www.researchobject.org), Wolfram Data Framework (www.wolfram.com/data-framework/)(???) and
-GigaScience platforms thus providing access to disparate and
-geographically distributed resources through a single point. For example, by hooking into locally hosted instances of
-iPlant and Galaxy using data and workflows stored in COPO profiles, experimental results may be
-easily reproduced and verified, or comparative studies may be
-conducted with alternative data.
+COPO will contribute to state-of-the-art open science by encouraging and implementing community-accepted standards for data representation; facilitating submission to persistent archival resources for data publication and citation; enabling seamless transition from data to analysis services and improving discoverability via contextualised ontological inference. Using APIs and virtualised resources, COPO will integrate other existing services such as Galaxy (www.galaxyproject.org) and iPlant (www.iplantcollaborative.org); figshare (www.figshare.com), GitHub (www.github.com), the Dryad Digital Repository (www.datadryad.org), MetaboLights (www.ebi.ac.uk/metabolights) and Zenodo (www.zenodo.org), thus providing access to disparate and distributed resources through a single point of entry. For example, by hooking into an instance of Galaxy using data and workflows referenced in COPO, experimental results may be easily reproduced and verified, and comparative studies may be conducted with alternative data.
 
-The availability of a plethora richly labeled research objects means that semantic inferences can be made, providing user customised suggestions for workflows and datasets. Such inferences are domain agnostic, with the potential for researchers to discover useful results from other fields. 
+Since research objects deposited through COPO will be accompanied by rich metadata implemented in JSON-LD, cutting edge technologies such as MongoDB (www.mongodb.org) and neo4J (www.neo4j.org) will be used to create a web of semantic inferences, providing user customised suggestions for future avenues of investigation. Such inferences are domain agnostic, with the potential for Bioinformaticians to discover useful results and techniques from other fields. 
 
-We believe that the ongoing development of COPO will contribute to state-of-the-art open science by enforcing community-accepted standards for data representation; facilitating submission to persistent archival resources for data publication and citation; enabling seamless transition from data to analysis services and improving discoverability via contextualised ontological inference. 
-
-
+So far, a prototype front-end has been developed with the ability to create user accounts and work profiles. Data transfers to the ENA are possible with associated metadata being input into intuitive forms. Metadata is stored in a document based database, with transfers between data formats (JSON-LD and ISATab) being handled by ISASuite tools.
