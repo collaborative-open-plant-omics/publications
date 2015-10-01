@@ -2,7 +2,6 @@
 \documentclass[runningheads,a4paper]{llncs}
 
 \usepackage{amssymb}
-\setcounter{tocdepth}{3}
 \usepackage{graphicx}
 
 \begin{document}
@@ -17,9 +16,9 @@
   V Schneider \inst{1}\and R Davey \inst{1}}
 %
 
-\institute{The Genome Analysis Centre, UK \and Oxford
-  e-Research Centre, University of Oxford, UK \and  European
-  Bioinformatics Institute, Cambridge \and University of Warwick}
+\institute{The Genome Analysis Centre, UK \and Oxford e-Research
+  Centre, University of Oxford, UK \and European Bioinformatics
+  Institute, Cambridge \and University of Warwick}
 
 \maketitle
 
@@ -43,6 +42,7 @@ science based on aggregated data. Many funding bodies and journals now
 require that data be made publicly available. Despite the
 opportunities that data sharing offers for recognition and reuse, many
 scientists still do not use public repositories, choosing instead to store data in private infrastructure. This is may be due to unfamiliarity with services and technology, lack of standards and common meta data, or a lack of funding to
+
 support archiving.
 
 The large number and size of datasets make them difficult to
@@ -64,6 +64,7 @@ searchable. Bundles of data objects can be
 deposited directly into public repositories (such as the European Nucleotide Archive, Figshare and F1000) through COPO interfaces.
 
 
+
 \vspace*{-0.3in}
 \section{Metadata Management}
 
@@ -78,6 +79,7 @@ information relative to the platform itself. Both JSON implementations
 can be extended to JSON-LD linked data schemas. All JSON metadata
 fragments are stored in a MongoDB document-based database.
 
+
 Where required, ISA converters allow traversal between representations
 of the same metadata, e.g. ISATab to/from ISA-JSON, and public
 repository formats are expressed as ISA configurations which are
@@ -89,6 +91,7 @@ from data representation to UI design.
 \vspace*{-0.1in}
 \section{Platform in Development}
 
+
 The COPO framework is being built using Python, Django, MongoDB,
 JSON-LD, ISATools, jQuery and Bootstrap technologies. A single sign-on (SSO) mechanism provided via ORCiD, allows COPO to track
 service integration and rich user profile data. Anonymous users are
@@ -99,6 +102,7 @@ fill out clean, intuitive web forms and story-driven wizards that use
 the semantic level metadata to make inferences about what a user is
 submitting, and subsequently make suggestions based on previous
 submissions.
+
 
 So far we have developed initial EMBL-EBI repository deposition
 support (European Nucleotide Archive (ENA), MetaboLights) facilitated
@@ -120,6 +124,7 @@ useful connections between datasets, investigations and
 protocols. Support for more repositories and open publishing platforms
 such are planned, as well as integration with cloud-based analysis services such as Galaxy
 and iPlant.
+
 
 
 \end{document}
