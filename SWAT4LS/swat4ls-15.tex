@@ -1,4 +1,4 @@
-		
+
 \documentclass[runningheads,a4paper]{llncs}
 
 \usepackage{amssymb}
@@ -7,72 +7,53 @@
 
 \begin{document}
 
-\mainmatter % start of an individual contribution
 
 % first the title is needed
 \title{COPO - Linked Open Infrastructure for Plant Data}
 
-% a short form should be given in case it is too long for the running
-% head
-\titlerunning{COPO - Linked Open Infrastructure for Plant Data}
-
-\author{F Shaw \and A Etuk \and A Gonzalez-Beltran\and P Rocca-Serra\and\\
-  P  Kersey\and R Bastow\and S Sansone\and\\
-  V Schneider\and R Davey}
-%
-\authorrunning{Lecture Notes in Computer Science: Authors'
-  Instructions}
-% (feature abused for this document to repeat the title also on left
-% hand pages)
-
-% the affiliations are given next; don't give your e-mail address
-% unless you accept that it will be published
-\institute{Springer-Verlag, Computer Science Editorial,\\
-  Tiergartenstr. 17, 69121 Heidelberg, Germany\\
- }
-
-%
-% NB: a more complex sample for affiliations and the mapping to the
-% corresponding authors can be found in the file "llncs.dem" (search
-% for the string "\mainmatter" where a contribution starts).
-% "llncs.dem" accompanies the document class "llncs.cls".
+\author{F Shaw \inst{1} \and A Etuk \inst{1} \and A Gonzalez-Beltran
+  \inst{2}\and P Rocca-Serra \inst{2}\and\\
+  P  Kersey \inst{3}\and R Bastow \inst{4} \and S Sansone \inst{2}\and\\
+  V Schneider \inst{1}\and R Davey \inst{1}}
 %
 
-\toctitle{Lecture Notes in Computer Science} \tocauthor{Authors'
-  Instructions}
+\institute{The Genome Analysis Centre, UK \and Oxford
+  e-Research Centre, University of Oxford, UK \and  European
+  Bioinformatics Institute, Cambridge \and University of Warwick}
+
 \maketitle
 
-
+\vspace*{-0.2in}
 \begin{abstract}
-  Collaborative Open Plant Omics (COPO) is a brokering
+Collaborative Open Plant Omics (COPO) is a brokering
   service between plant scientists and public repositories, enabling management, aggregation and publication of research
   outputs. COPO consolidates access to services and disparate
   information sources via web interfaces and Application Programming
   Interfaces (APIs). Users will deposit and view open
-  access data, as well as seamlessly pull such data into analysis environments. Subsequent accessions and associated meta data will be tracked in COPO, thus creating a provenance trail from
-  data to publication.
+  access data, as well as seamlessly pull such data into analysis environments. Subsequent accessions and associated meta data will be tracked in COPO, thus creating a provenance trail from data to publication.
 \end{abstract}
 
 \vspace*{-0.3in}
 \section{Introduction}
+
 In plant science, high
 throughput “-omics” technologies, have resulted in more and larger
-datasets. Researchers are realising the benefits of
-data sharing to promote their work and to accelerate discovery in
+datasets. Researchers are realising the benefits of data sharing to promote their work and to accelerate discovery in
 science based on aggregated data. Many funding bodies and journals now
 require that data be made publicly available. Despite the
 opportunities that data sharing offers for recognition and reuse, many
-scientists still do not use public repositories, choosing instead to
-store data in private infrastructure. This is may be due to unfamiliarity with services and technology, lack of standards and common meta data, or a lack of funding to
+scientists still do not use public repositories, choosing instead to store data in private infrastructure. This is may be due to unfamiliarity with services and technology, lack of standards and common meta data, or a lack of funding to
 support archiving.
 
 The large number and size of datasets make them difficult to
 store, let alone download, making cloud-based analysis tools essential. However, submission formats to public repositories are
+
 heterogeneous, often requiring manual authoring of complex markup
 documents, taking scientists out of their fields of expertise.
 
 COPO aims to streamline the process of data deposition to public
 repositories and data journals, by hiding much of the complexity of
+
 meta data capture and data management from the end-user. The ISA
 infrastructure (www.isa-tools.org) provides the
 interoperability between metadata formats required for deposition to repositories.  Logical groupings of artifacts (e.g. experimental meta data
@@ -85,6 +66,7 @@ deposited directly into public repositories (such as the European Nucleotide Arc
 
 \vspace*{-0.3in}
 \section{Metadata Management}
+
 The Investigation/Study/Assay (ISA) model enables experimental
 metadata attribution and management of metadata formats, where
 scientific metadata comprises information about investigators,
@@ -106,10 +88,12 @@ from data representation to UI design.
 
 \vspace*{-0.1in}
 \section{Platform in Development}
+
 The COPO framework is being built using Python, Django, MongoDB,
 JSON-LD, ISATools, jQuery and Bootstrap technologies. A single sign-on (SSO) mechanism provided via ORCiD, allows COPO to track
 service integration and rich user profile data. Anonymous users are
 able to search the COPO index for research artifacts. Deposition functionality is available to authenticated users only. The
+
 complexity of deposition services is hidden from end users, who simply
 fill out clean, intuitive web forms and story-driven wizards that use
 the semantic level metadata to make inferences about what a user is
@@ -124,6 +108,7 @@ supplementary data, etc) is also supported.
 
 \vspace*{-0.1in}
 \section{Future Work}
+
 The large network of linked metadata that COPO will gather allows
 semantic meaning to be attached to research artifacts. Semantic
 inferences can then be made over artifacts providing a richer search
@@ -133,8 +118,7 @@ linked by inter-connected network of metadata. The provision of
 visualization for graphs of linked metadata will aid discovery of
 useful connections between datasets, investigations and
 protocols. Support for more repositories and open publishing platforms
-such are planned, as
-well as integration with cloud-based analysis services such as Galaxy
+such are planned, as well as integration with cloud-based analysis services such as Galaxy
 and iPlant.
 
 
